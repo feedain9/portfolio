@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700;800&display=swap');
+@keyframes col { 0% {background-color:#4c4cc5} 50% {background-color:#6e6ea5} 100% {background-color:#4c4cc5} }
+/* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 450px }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(38, 99, 190) }
+  }
+
+  @keyframes accueil1 {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateX(-10px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateX(10px);
+	}
+
+	80% {
+		transform: translateX(8px);
+	}
+
+	90% {
+		transform: translateX(-8px);
+	}
+}
+@keyframes accueil2 {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 50%;
+	}
+
+	10% {
+		transform: rotate(8deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-10deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(10deg);
+	}
+
+	80% {
+		transform: rotate(-8deg);
+	}
+
+	90% {
+		transform: rotate(8deg);
+	}
+}
+@keyframes accueil3 {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 0;
+	}
+
+	10% {
+		transform: rotate(2deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-4deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(4deg);
+	}
+
+	80% {
+		transform: rotate(-2deg);
+	}
+
+	90% {
+		transform: rotate(2deg);
+	}
+}
+
+
+
+/*Fonction CSS*/
+/*Toute la page*/
+body {
+    font-family: 'Nunito', sans-serif;
+    height: 100%;
+    background-color: #1b1c20;
+    margin: 0;
+    /* animation: col 3s infinite; */
+  }
+html {
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(section);
+  scroll-snap-type: y mandatory;
+}
+.dark-mode {
+    background-color: black;
+    color: white;
+  }
+/*Bas de page*/
+footer{
+    scroll-snap-type: end;
+    padding-top: 75px;
+}
+header{
+    /* background-color: #5e5ef7; */
+    animation: col 3s infinite;
+}
+a /* Liens par défaut (non survolés) */
+{
+   text-decoration: none;
+   color: azure;
+}
+a:hover /* Apparence au survol des liens */
+{
+   text-decoration:double;
+   color: rgb(35, 56, 175);
+}
+a:visited{
+    text-decoration: none;
+}
+section {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-align: start;
+  }
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav li{
+    padding: 5px;
+    text-decoration: none;
+}
+nav a
+{
+    color: azure;
+    padding-bottom: 3px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: rgb(35, 56, 175);
+    text-decoration: none;
+}
+
+
+/*Classes créés*/
+.accueil{
+    text-align: center;
+    background-color: yellow;
+}
+
+.scroller{
+    height: 300px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-padding: 40px;
+}
+.scroller section{
+    scroll-snap-align: start;
+}
+
+/*Lorsque l'accueil contenant le titre est survolé*/
+.accueil:hover{
+    color:blue;
+}
+.entete{
+    font-size: 20px;
+    color: #0000ff;
+}
+.entete:hover{
+    color:black;
+}
+.logo{
+    width: 55px;
+    height: 29px;
+    position: relative;
+    display: block;
+}
+.dl_cv{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    display: inline;
+    padding-right: 5%;
+}
+/*.logo:hover{
+    width: 120px;
+    height: 40px;
+}*/
+.footer_catego{
+    padding-left: 5%;
+}
+.footer_align{
+    display: flex;
+    align-items: center;
+}
+
+.text_principal{
+    color: azure;
+    font-size: 17px;
+}
+.encours{
+    display: flex;
+    color: azure;
+    justify-content: center;
+    min-height: 79vh;
+    padding-bottom: 10px;
+    align-items: center;
+    flex-direction:column;
+    text-align: center;
+}
+.div_project_name{
+    text-align: center;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding-bottom: initial;
+    /* width: 600; */
+    /* height: 150; */
+    border: 2px solid #969696;
+    background: #1f201f;
+    margin: 5px;
+}
+.project {
+    color: azure;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    /* width: 600; */
+    /* height: 150; */
+    border: 2px solid #969696;
+    background: #474c49;
+    margin: 10px;
+  }
+.project_name{
+    font-weight: 700;
+}
+.surligner:hover{
+    color : #a3a3e9;
+}
+.menu_form{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.menu_form img{
+    padding-left: 12px;
+    float: left;
+}
+.surligner{
+    color:#5e5ef7;
+}
+.surligner_date{
+    color:#5e5ef7;
+    padding-left: 1%;
+}
+.principal_bienvenue{
+    font-size: 30px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+.principal_bienvenue a{
+    border-radius: 10px;
+    background-color: #5e5ef7;
+    border: solid #918888;
+    padding: 5px;
+}
+.principal_center{
+    color: azure;
+    display: flex;
+    justify-content: center;
+    min-height: 79vh;
+    padding-bottom: 10px;
+    align-items: center;
+    flex-direction:column;
+}
+.principal_btn{
+    animation: accueil1 2s ease 0s 1 normal forwards;
+    background-color: #5e5ef7;
+    border: 5px solid #021894;
+}
+
+
+/*Les différents conteneurs*/
+#conteneur{
+    display: flex;
+}
+#conteneurr{
+    display: flex;
+}
+#conteneur_footer{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width:100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    bottom: 0;
+    /* background-color: #5e5ef7; */
+    animation: col 3s infinite;
+    position:fixed;
+}
+
+#alignementt{
+    display:flex;
+    margin: 40px;
+}
+
+@media all and (min-width: 400px) and (max-width: 600px){
+    nav
+    {
+        width: auto;
+        text-align: left;
+    }
+    
+    nav ul
+    {
+        font-size: 20px;
+    }
+
+    footer{
+        font-size: 15px;
+        width:auto;
+    }
+    .logo{
+        width: 45px;
+        height: 19px;
+    }
+    .dl_cv{
+        width: 25px;
+        height: 25px;
+    }
+    .encours{
+        font-size: 40px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .text_principal{
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width: 400px){
+    nav ul
+    {
+        font-size: 10px;
+    }
+    footer{
+        font-size: 10px;
+        width:auto;
+    }
+    .dl_cv{
+        width: 15px;
+        height: 15px;
+    }
+    .text_principal{
+        font-size: 10px;
+    }
+}
