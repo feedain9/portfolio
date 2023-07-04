@@ -19,14 +19,20 @@
 
 <body>
     <div class="header" id="home">
+        <div class="hamburger-container" id="hamburger">
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+        </div>
         <a href="#home" class="zoomcmp"><img src="img/letter.png" alt="logo" style="height: 50px;"></i></a>
-        <a href="#home" class="zoomcmp">Accueil<i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
-        <a href="#projects" class="zoomcmp">Projets<i class="fa-solid fa-folder-open" style="color: #ffffff;"></i></a>
-        <a href="#formations" class="zoomcmp">Diplômes/Formations<i class="fa-solid fa-folder-open" style="color: #ffffff;"></i></a>
-        <a href="#experiences" class="zoomcmp">Expériences<i class="fa-solid fa-folder-open" style="color: #ffffff;"></i></a>
-        <a href="#competences" class="zoomcmp">Compétences<i class="fa-solid fa-folder-open" style="color: #ffffff;"></i></a>
-        <a href="#contact" class="zoomcmp">Contact<i class="fa-solid fa-folder-open" style="color: #ffffff;"></i></a>
-
+        <div class="header-content-container" id="header-content-container">
+            <a href="#home" class="zoomcmp">Accueil<i class="fa-solid fa-house" style="color: #ffffff;"></i></a>
+            <a href="#projects" class="zoomcmp">Projets<i class="fa-solid fa-folder-open" style="color: #ffffff;"></i></a>
+            <a href="#formations" class="zoomcmp">Diplômes/Formations<i class="fa-solid fa-folder-open" style="color: #ffffff;"></i></a>
+            <a href="#experiences" class="zoomcmp">Expériences<i class="fa-solid fa-folder-open" style="color: #ffffff;"></i></a>
+            <a href="#competences" class="zoomcmp">Compétences<i class="fa-solid fa-folder-open" style="color: #ffffff;"></i></a>
+            <a href="#contact" class="zoomcmp">Contact<i class="fa-solid fa-folder-open" style="color: #ffffff;"></i></a>
+        </div>
     </div>
     <main>
         <!-- Projets -->
@@ -141,5 +147,28 @@
             <a href="mailto:contact@tarielgabrielyan.fr" class="zoomcmp" target="_blank"><i style="margin-left: 5px;" class="fa-solid fa-envelope" style="color: #ffffff;"></i></a>
         </div>
     </div>
+    <script>
+        // write script to get element by id "header" and toggle display attribut between none and flex
+        function toggleMenu() {
+            var hamburger = document.getElementById('hamburger');
+            var menu = document.getElementById('header-content-container');
+            if (menu.style.display == "none") { // if is menuBox displayed, hide it
+                menu.style.display = "flex";
+            } else { // if is menuBox hidden, display it
+                menu.style.display = "none";
+            }
+        }
+        // listen for click event on hamburger and apply toggleMenu function
+        hamburger.addEventListener('click', toggleMenu, false);
+        // listen for windows resize and delete none display attribut if it is
+        window.addEventListener('resize', function() {
+            var menu = document.getElementById('header-content-container');
+            if (window.innerWidth > 768) {
+                menu.style.display = "";
+            } else {
+                menu.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
