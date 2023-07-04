@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+/*Fonction CSS*/
+/*Toute la page*/
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #b7b7b7;
+    margin: 0;
+}
+
+h1{
+    color: #0c0ce1;
+}
+
+/* header */
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* height: 10vh; */
+    background-color: #5e5ef7;
+}
+
+.header i{
+    font-size: 15px;
+    color: white;
+    margin: 5px;
+}
+
+.header a {
+    color: white;
+}
+
+/* footer */
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5e5ef7;
+}
+.footer a{
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    color: #9b9bfa;
+}
+
+.footer div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.footer i{
+    color: white;
+    margin: 5px;
+    font-size: 30px;
+}
+/* main */
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* anchor */
+a
+{
+   text-decoration: none;
+   color: black;
+}
+a:hover
+{
+   text-decoration:double;
+   /* color: rgb(35, 56, 175); */
+}
+
+/* fonction de zoom sur un composant */
+.zoomcmp{
+    transition: transform .2s;
+}
+.zoomcmp:hover{
+    transform: scale(1.03);
+}
+
+/* project */
+.project{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.project img{
+    max-height: 100px;
+}
+
+/* Formation */
+.formation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+.formation img{
+    max-height: 80px;
+    margin-right: 10px;
+}
+/* Expériences */
+.experience{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.experience img{
+    max-height: 80px;
+    margin-right: 10px;
+}
+
+/* Compétences */
+.competence{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    font-size: 50px;
+}
+.competence img{
+    max-height: 80px;
+    margin-right: 10px;
+}
+
+/* wrapper */
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+.wrapper a {
+    color: #5e5ef7;
+}
+.wrapper-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 15px;
+    flex: 1;
+}
+.wrapper-row a{
+    color: #5e5ef7;
+}
+
+#contact{
+    margin-bottom: 0;
+}
+
+/* Media queries */
+@media screen and (max-width: 770px) {
+    .header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .header a{
+        margin: 10px;
+    }
+    .footer a{
+        margin: 10px;
+    }
+    .footer div{
+        margin: inherit;
+        padding: 0px;
+    }
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .zoomcmp{
+        transform: scale(1);
+    }
+    .wrapper-row{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .wrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
